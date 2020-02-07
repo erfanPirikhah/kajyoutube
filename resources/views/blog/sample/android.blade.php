@@ -9,6 +9,8 @@
             <div class="col-lg-12 col-md-12 col-xs-12">
            
             <div class="row portfolio-gallary" style="position: relative; height: 650px;">
+
+               
               @foreach ($items as $item)
         
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 port-item  " style="position: absolute; right: 0%; top: 0px;">
@@ -30,9 +32,9 @@
             </div>
         </div>
         
-        <div style="text-align: center">
-            {{$items->render()}} 
-        </div>
+        {{-- <div style="text-align: center">
+            {{$item ->render()}} 
+        </div> --}}
         
     </div>
 </section>

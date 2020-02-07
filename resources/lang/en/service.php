@@ -2,6 +2,7 @@
 
 return [
     'order'=>'Order ',
+    'sample'=>'Work samples',
 
     'program'=>[
         'title'=>'Web Desing',

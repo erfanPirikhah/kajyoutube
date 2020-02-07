@@ -125,4 +125,54 @@ class BlogController extends Controller
         $rows=Sample::whereLang($local)->paginate(12);
         return view('blog.sample.show.all', compact('rows'));
     }
+
+    public function sampleAndroid(){
+
+        $local=app()->getLocale();
+        $items=Sample::where('category','android')->Where('lang',$local)->paginate(12);
+        return view('blog.sample.android',compact('items'));
+    }
+
+    public function sampleAnimaite()
+    {
+        $local=app()->getLocale();
+        $items=Sample::where('category','animaite')->Where('lang',$local)->paginate(12);
+        return view('blog.sample.animaite',compact('items'));
+    }
+
+    public function sampleCampaign()
+    {
+        $local=app()->getLocale();
+        $items=Sample::where('category','Campaign')->Where('lang',$local)->paginate(12);
+        return view('blog.sample.Campaign',compact('items'));
+    }
+
+    public function sampleLogo()
+    {
+        $local=app()->getLocale();
+        $items=Sample::where('category','logo')->Where('lang',$local)->paginate(12);
+        return view('blog.sample.logo_design',compact('items'));
+    }
+
+    public function samplePoster()
+    {
+        $local=app()->getLocale();
+        $items=Sample::where('category','poster')->Where('lang',$local)->paginate(12);
+        return view('blog.sample.poster',compact('items'));
+    }
+
+    public function sampleProgram()
+    {
+        $local=app()->getLocale();
+        $items=Sample::where('category','program')->Where('lang',$local)->paginate(12);
+        return view('blog.sample.program',compact('items'));
+    }
+
+    public function sampleTeaser()
+    {
+        $local=app()->getLocale();
+        $items=Sample::where('category','teaser')->Where('lang',$local)->paginate(12);
+        return view('blog.sample.teaser',compact('items'));
+    }
+
 }

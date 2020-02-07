@@ -20,7 +20,10 @@
             </div>
             <div>   
                 <a href="{{route('order')}}" class="btn btn-success-light btn-rounded mb-2">{{__('service.order')}}<i class="ml-2 ti-arrow-right"></i></a>
-            </div>        </div>
+                <a href="{{route('sample.teaser')}}" class="btn btn-warning-light btn-rounded mb-2" style="margin-right:30px">{{__('service.sample')}}<i class="ml-2 ti-arrow-right"></i></a>
+
+            </div>      
+          </div>
         
     </div>
 </section>

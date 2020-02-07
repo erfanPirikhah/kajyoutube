@@ -3,6 +3,7 @@
 return [
 
         'order'=>'ثبت سفارش',
+        'sample'=>'نمونه کار',
 
         'program'=>[
             'title'=>'طراحی وب',

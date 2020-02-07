@@ -38,6 +38,16 @@ use Illuminate\Http\Resources\Json\Resource;
         // Route::get('/sample-show-teaser/{sample}', 'BlogController@sampleshowTeaser')->name('sampleshow.teaser');
         Route::get('/sample/web-design', 'BlogController@indexWeb')->name('indexWeb');
         Route::get('/sample-all','BlogController@sampleAll')->name('sample.all');
+
+        Route::get('/sample-android','BlogController@sampleAndroid')->name('sample.android');
+        Route::get('/sample-animaite','BlogController@sampleAnimaite')->name('sample.animaite');
+        Route::get('/sample-Campaign','BlogController@sampleCampaign')->name('sample.Campaign');
+        Route::get('/sample-logo','BlogController@sampleLogo')->name('sample.logo');
+        Route::get('/sample-poster','BlogController@samplePoster')->name('sample.poster');
+        Route::get('/sample-program','BlogController@sampleProgram')->name('sample.program');
+        Route::get('/sample-teaser','BlogController@sampleTeaser')->name('sample.teaser');
+
+
     });
 
 

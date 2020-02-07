@@ -2,11 +2,11 @@
 
 @section('content')
 
-<div class="ct-header ct-header--slider ct-slick-custom-dots text-center overlap-bg" id="home">
+<div class="ct-header ct-header--slider ct-slick-custom-dots text-center" id="home">
     <div class="ct-slick-homepage" data-arrows="true" data-autoplay="true">
 
-        <div class="ct-header slick-slide-animate tablex item" data-background="/blog/img/baner/1.jpg">
-            <div class="ct-u-display-tablex">
+        <div class="ct-header slick-slide-animate tablex item"  data-background="/blog/img/baner/1.jpg">
+        <div class="ct-u-display-tablex">
                 <div class="inner">
                    
                 </div>
@@ -50,21 +50,7 @@
             </div>
         </div>
 
-        <div class="ct-header tablex item" data-background="/blog/img/baner/7.jpg">
-            <div class="ct-u-display-tablex">
-                <div class="inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 slider-inner">
-                                <h1 class="big">حرکت کسب و کار به جلو</h1>
-                                <p>هدف از کسب و کار ایجاد و نگهداری مشتری است.</p>
-                              
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         
     </div><!-- .ct-slick-homepage -->
 </div>
@@ -279,7 +265,7 @@
       
                 <div class="row portfolio-gallary" style="position: relative; height: 650px;">
                
-                    @foreach (App\Sample::where('category','program')->wherelang(app()->getLocale())->get() as $item)
+                    @foreach (App\Sample::where('category','program')->wherelang(app()->getLocale())->paginate(9) as $item)
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 port-item  program" style="position: absolute; right: 0%; top: 0px;">
                         <div class="portfolio-wrap portfolio-inner">
                             <a href="{{route('sampleshow',['id'=>$item->id])}}""><img src="{{$item->imageUrl}}" alt="project" style=" width:360px; height:225px"></a>
@@ -297,7 +283,7 @@
                     @endforeach
 
                              
-                    @foreach (\App\Sample::where('category','teaser')->wherelang(app()->getLocale())->get() as $item)
+                    @foreach (\App\Sample::where('category','teaser')->wherelang(app()->getLocale())->paginate(9) as $item)
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 port-item  teaser" style="position: absolute; right: 0%; top: 0px;">
                         <div class="portfolio-wrap portfolio-inner">
                             <a href="{{route('sampleshow',['id'=>$item->id])}}""><img src="{{$item->imageUrl}}" alt="project" style=" width:360px; height:225px"></a>
@@ -314,7 +300,7 @@
                     @endforeach
 
                                
-                    @foreach (\App\Sample::where('category','logo')->wherelang(app()->getLocale())->get() as $item)
+                    @foreach (\App\Sample::where('category','logo')->wherelang(app()->getLocale())->paginate(9) as $item)
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 port-item  logo" style="position: absolute; right: 0%; top: 0px;">
                         <div class="portfolio-wrap portfolio-inner">
                             <a href="{{route('sampleshow',['id'=>$item->id])}}""><img src="{{$item->imageUrl}}" alt="project" style=" width:360px; height:225px"></a>
@@ -331,7 +317,7 @@
                     @endforeach
 
                                
-                    @foreach (\App\Sample::where('category','android')->wherelang(app()->getLocale())->get() as $item)
+                    @foreach (\App\Sample::where('category','android')->wherelang(app()->getLocale())->paginate(9) as $item)
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 port-item  android" style="position: absolute; right: 0%; top: 0px;">
                         <div class="portfolio-wrap portfolio-inner">
                             <a href="{{route('sampleshow',['id'=>$item->id])}}""><img src="{{$item->imageUrl}}" alt="project" style=" width:360px; height:225px"></a>
@@ -348,7 +334,7 @@
                     @endforeach
 
                                
-                    @foreach (\App\Sample::where('category','poster')->wherelang(app()->getLocale())->get() as $item)
+                    @foreach (\App\Sample::where('category','poster')->wherelang(app()->getLocale())->paginate(9) as $item)
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 port-item  poster" style="position: absolute; right: 0%; top: 0px;">
                         <div class="portfolio-wrap portfolio-inner">
                             <a href="{{route('sampleshow',['id'=>$item->id])}}""><img src="{{$item->imageUrl}}" alt="project" style=" width:360px; height:225px"></a>
@@ -365,7 +351,7 @@
                     @endforeach
 
                                
-                    @foreach (\App\Sample::where('category','animaite')->wherelang(app()->getLocale())->get() as $item)
+                    @foreach (\App\Sample::where('category','animaite')->wherelang(app()->getLocale())->paginate(9) as $item)
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 port-item  animaite" style="position: absolute; right: 0%; top: 0px;">
                         <div class="portfolio-wrap portfolio-inner">
                             <a href="{{route('sampleshow',['id'=>$item->id])}}""><img src="{{$item->imageUrl}}" alt="project" style=" width:360px; height:225px"></a>
@@ -382,7 +368,7 @@
                     @endforeach
 
                                
-                    @foreach (\App\Sample::where('category','Campaign')->wherelang(app()->getLocale())->get() as $item)
+                    @foreach (\App\Sample::where('category','Campaign')->wherelang(app()->getLocale())->paginate(9) as $item)
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 port-item  Campaign" style="position: absolute; right: 0%; top: 0px;">
                         <div class="portfolio-wrap portfolio-inner">
                             <a href="{{route('sampleshow',['id'=>$item->id])}}""><img src="{{$item->imageUrl}}" alt="project" style=" width:360px; height:225px"></a>
