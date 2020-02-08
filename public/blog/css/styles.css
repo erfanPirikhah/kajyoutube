@@ -6598,7 +6598,7 @@ footer.skin-dark-footer ul.footer-bottom-social li a:hover, footer.skin-dark-foo
 	}
 	.ct-u-display-tablex {
 		min-height:500px;
-		height:100vh;
+		height:120px;
 	}
 	.hover-dropdown .navbar-nav > .dropdown:hover > .dropdown-menu {
 		display: block;

@@ -252,7 +252,7 @@
                 <div class="portfolio-sort">
                  <center><h2>{{__('index.sample')}}</h2></center>   
                     <ul class="sorting clearfix center-grid">
-                       
+                        <li class="sort-btn active" data-filter="*">همه</li>
                         <li class="sort-btn" data-filter=".teaser">{{__('index.sample.teaser')}}</li>
                         <li class="sort-btn" data-filter=".program">{{__('index.sample.program')}}</li>
                         <li class="sort-btn" data-filter=".logo">{{__('index.sample.Logo')}}</li>
@@ -265,6 +265,8 @@
       
                 <div class="row portfolio-gallary" style="position: relative; height: 650px;">
                
+
+
                     @foreach (App\Sample::where('category','program')->wherelang(app()->getLocale())->paginate(9) as $item)
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 port-item  program" style="position: absolute; right: 0%; top: 0px;">
                         <div class="portfolio-wrap portfolio-inner">

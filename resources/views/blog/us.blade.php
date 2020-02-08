@@ -26,7 +26,7 @@
 							<div class="contact-address light-text">
 							
 								
-								<div class="add-box">
+								{{-- <div class="add-box">
 									<div class="add-icon-box">
 										<i class="ti-map-alt"></i>
 									</div>
@@ -34,7 +34,7 @@
 										<h4>{{__('index.contact.address')}}</h4>
 										{{__('index.contact.anzali')}}
 									</div>
-								</div>
+								</div> --}}
 								
 								<div class="add-box">
 									<div class="add-icon-box">

@@ -3443,7 +3443,7 @@ top:-20px;
 .ct-u-display-tablex {
 	display: table;
 	width: 100%;
-	min-height:550px;
+	min-height:320px;
 	position:relative;
 }
 .ct-u-display-tablex > .inner {
@@ -6597,8 +6597,8 @@ footer.skin-dark-footer ul.footer-bottom-social li a:hover, footer.skin-dark-foo
 		line-height:1;
 	}
 	.ct-u-display-tablex {
-		min-height:500px;
-		height:100vh;
+    min-height:500px;
+		height:120px;
 	}
 	.hover-dropdown .navbar-nav > .dropdown:hover > .dropdown-menu {
 		display: block;
