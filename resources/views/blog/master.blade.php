@@ -22,10 +22,36 @@
 
 		
 	</head>
-	
+	<style>
+#loading {
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   position: fixed;
+   display: block;
+   opacity: 0.7;
+   background-color: #fff;
+   z-index: 99;
+   text-align: center;
+}
+ 
+#loading-image {
+  position: absolute;
+    top: 45%;
+    left: 45%;
+  z-index: 99999999;
+}
+	</style>
 	
     <body>
-	
+
+
+<div id="loading">
+  <img id="loading-image" src="/blog/img/Infinity-1s-200px (1).gif" alt="Loading..." />
+</div>
+
+
         <!-- ============================================================== -->
         <!-- Preloader - style you can find in spinners.css -->
         <!-- ============================================================== -->
@@ -214,6 +240,16 @@
 				});
 			});
 		</script>
+
+		
+
+<script type="text/javascript">
+$(function() {
+    $(window).on("load", function() {
+        $('#loading').hide();
+    });
+});
+</script>
 
 
 	</body>
