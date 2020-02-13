@@ -200,12 +200,12 @@ h6 {
 }
 
 h1 {
-	font-family: 'aviny';
+	font-family: 'themex';
   line-height: 40px;
   font-size: 36px; }
 
 h2 {
-	font-family: 'aviny';
+	font-family: 'themex';
   line-height: 46px;
   font-size: 45px; }
 
@@ -3793,7 +3793,9 @@ top:-20px;
     padding:2.77em 2em;
 }
 .border--radius {
-    border-radius: 6px;
+  border-style: solid;
+  border-color: #faaf40;
+  border-radius: 16px
 }
 
 .icon:not(.block) {

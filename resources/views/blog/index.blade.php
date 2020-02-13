@@ -59,7 +59,83 @@
 
 <!-- ============================ Make Collaboration Start ================================== -->
 
-<section>
+<br><br>
+<section class="pd-0 overlay-top">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-10 col-sm-12">
+                <div class="row mrg-0 bg-white box-shadow pt-5 border--radius">
+                    <div class="container">
+    
+                        <div class="row">
+                            <div class="col text-center">
+                                <div class="sec-heading mx-auto">
+                                    <h2>{{ __('index.part.title') }}</h2>
+                                    <h6>{{ __('index.part.body') }} </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="large-features-2 style-1 shadow-0 border-0">
+                            <div class="large-features-2-thumb">
+                                <i class="ti-desktop icon--lg"></i>
+                            </div>
+                            <div class="large-features-2-detail">
+                                <h4>{{ __('index.part.title1') }}</h4>
+                                <p> {{ __('index.part.body1') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="large-features-2 style-1 shadow-0 border-0">
+                            <div class="large-features-2-thumb">
+                                <i class="ti-share icon--lg"></i>
+                            </div>
+                            <div class="large-features-2-detail">
+                                <h4> {{ __('index.part.title2') }}</h4>
+                                <p>
+                                    {{ __('index.part.body2') }}
+                                </p>                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="large-features-2 style-1 shadow-0 border-0">
+                            <div class="large-features-2-thumb">
+                                <i class="ti-thumb-up icon--lg"></i>
+                            </div>
+                            <div class="large-features-2-detail">
+                                <h4>{{ __('index.part.title3') }}</h4>
+                                <p>
+                                    {{ __('index.part.body3') }}
+                                </p>                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="large-features-2 style-1 shadow-0 border-0">
+                            <div class="large-features-2-thumb">
+                                <i class="ti-headphone-alt icon--lg"></i>
+                            </div>
+                            <div class="large-features-2-detail">
+                                <h4>{{ __('index.part.title4') }} </h4>
+                                <p>
+                                    {{ __('index.part.body4') }}
+                                </p>                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{-- <section>
     <div class="container">
     
         <div class="row">
@@ -125,7 +201,7 @@
         </div>
         
     </div>
-</section>
+</section> --}}
 <!-- ============================ Make Collaboration End ================================== -->
 
 <!-- ============================ What We Do & Who We Are Start ================================== -->
