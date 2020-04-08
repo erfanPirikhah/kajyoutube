@@ -19,7 +19,10 @@
 		<link href="/blog/css/styles-en.css" rel="stylesheet">
 		@endif
 
-
+	
+		@php
+			$local=app()->getLocale()
+		@endphp
 		
 	</head>
 	<style>
@@ -71,7 +74,7 @@
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="ti-align-right"></span></button>
 						<div class="collapse navbar-collapse hover-dropdown font-14 ml-auto" id="navigation">
 							<ul class="navbar-nav ml-auto">
-								<li class="nav-item"><a href="/"  class="nav-link">{{__('index.header.home')}}</a> </li>
+								<li class="nav-item"><a href={{"/$local"}}  class="nav-link">{{__('index.header.home')}}</a> </li>
 								
 								
 								<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{__('index.header.service')}} <i class="fa fa-angle-down m-l-5"></i></a>
@@ -92,7 +95,23 @@
 								
 								
 							<li class="nav-item"><a href="{{route('content')}}"  class="nav-link">{{__('index.header.news')}}</a> </li>
-							<li class="nav-item"><a href="{{route('sample.all')}}"  class="nav-link">{{__('index.header.sample')}}</a> </li>
+							{{-- <li class="nav-item"><a href="{{route('sample.all')}}"  class="nav-link">{{__('index.header.sample')}}</a> </li> --}}
+
+
+							<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{__('service.sample')}} <i class="fa fa-angle-down m-l-5"></i></a>
+								<ul class="b-none dropdown-menu font-14 animated fadeInUp">
+									<li><a class="dropdown-item" href="{{route('sample.program')}}">{{__('index.sample.program')}}</a></li>
+									<li><a class="dropdown-item" href="{{route('sample.teaser')}}">{{__('index.sample.teaser')}}</a></li>
+									<li><a class="dropdown-item" href="{{route('sample.logo')}}">{{__('index.sample.Logo')}}</a></li>
+									<li><a class="dropdown-item" href="{{route('sample.android')}}">{{__('index.sample.android')}} </a></li>
+									<li><a class="dropdown-item" href="{{route('sample.poster')}}">{{__('index.sample.poster')}}</a></li>
+									<li><a class="dropdown-item" href="{{route('sample.animaite')}}">{{__('index.sample.photography')}}</a></li>	
+									<li><a class="dropdown-item" href="{{route('sample.Campaign')}}">{{__('index.sample.Campaign')}}</a></li>	
+								</ul>
+							</li>
+							
+
+
 							<li class="nav-item"><a href="{{route('order')}}"  class="nav-link">{{__('index.header.order')}}</a> </li>
 							<li class="nav-item"><a href="{{route('about')}}"  class="nav-link">{{__('index.header.about')}}</a> </li>
 							<li class="nav-item"><a href="{{route('us')}}"  class="nav-link">{{__('index.header.contact')}}</a> </li>
@@ -131,7 +150,7 @@
 			<!-- Top header  -->
 			<!-- ============================================================== -->
 			
-			
+		<a href="{{route('sample.program')}}">ss</a>
 			<!-- ============================ Hero Slider Banner  Start================================== -->
                 @yield('content');
 			<!-- ============================ Footer Start ================================== -->
@@ -145,21 +164,80 @@
 								<div class="footer-widget">
 									<h4 class="widget-title">#{{__('footer.talkwithme')}}</h4>
 									<ul class="footer-menu">
-										<li><a href="#">{{__('footer.2')}}</a></li>
-										<li><a href="#">{{__('footer.3')}}</a></li>
-										<li><a href="#">{{__('footer.5')}}</a></li>
+										
+										<li><a href="#"  data-toggle="modal" data-target=".bd-example-modal-xl">{{__('footer.2')}}</a></li>
+										<li><a href="#"  data-toggle="modal" data-target=".bd-example-modal-xl">{{__('footer.3')}}</a></li>
+										<li><a href="#"  data-toggle="modal" data-target=".bd-example-modal-xl">{{__('footer.5')}}</a></li>
 										<li><a href="#">{{__('footer.6')}}</a></li>
 									</ul>
 								</div>
 							</div>		
+
+							<section class="p-0 overlay-bottom">
+						
+			
+			
+			
+								<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-xl" role="document">
+								  		<div class="modal-content">
+											<div class="modal-header">
+												<button type="button"  data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										  </button>
+								</div>
+									<div class="container">
+								<br>
+									
+										<div class="contact-form">
+											
+											<form action="{{route('us.store')}}" method="post">
+												@include('layout.errors')
+												<h3>برای دریافت مشاوره ی رایگان فرم زیر را پرکنید</h3>
+												@csrf
+
+												<br><br>
+												<div class="form-row">
+													<div class="form-group col-md-6">
+													  <label class="c-og">{{__('index.contact.name')}}</label>
+													  <input type="text" name="name" class="form-control"   value="{{ old('nameh')}}">
+													</div>
+													<div class="form-group col-md-6">
+													  <label class="c-og">{{__('index.contact.email')}}</label>
+													  <input type="email" name="email" class="form-control"   value="{{ old('email')}}">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="c-og">{{__('index.contact.mobile')}}</label>
+													<input type="text" name="mobile" class="form-control"   value="{{ old('mobile')}}">
+												</div>
+												<div class="form-group">
+													<label class="c-og">{{__('index.contact.description')}}</label>
+													<input type="text" name="description" class="form-control"  value="{{ old('description')}}">
+												</div>
+												<div class="form-group">
+													<label class="c-og">{{__('index.contact.body')}}</label>
+													<textarea class="form-control" name="body" > {{ old('body')}}</textarea>
+												</div>
+												<button type="submit" class="btn bg-og">{{__('index.contact.send')}}</button>
+											</form>
+											<br><br>
+										</div>
+									</div>
+								  </div>
+								</div>
+							  </div>
+							</section>
+						
+							 <div class="clearfix"></div>
 							<div class="col-lg-3 col-md-6">
 								<div class="footer-widget">
 									<h4 class="widget-title">{{__('footer.7')}}</h4>
 									<ul class="footer-menu">
-										<li><a href="#about">{{__('footer.8')}}</a></li>
-										<li><a href="#">{{__('footer.9')}}</a></li>
+										<li><a href="{{route('about')}}">{{__('footer.8')}}</a></li>
+										<li><a href="{{route('content')}}">{{__('footer.9')}}</a></li>
 										<li><a href="#">{{__('footer.10')}}</a></li>
-										<li><a href="#">{{__('footer.11')}}</a></li>
+										<li><a href="{{route('us')}}">{{__('footer.11')}}</a></li>
 										<li><a href="#">{{__('footer.12')}}</a></li>
 									</ul>
 								</div>
@@ -168,7 +246,7 @@
 							<div class="col-lg-3 col-md-6">
 								<div class="footer-widget">
 									<h4 class="widget-title"></h4>
-									<p>{{__('footer.address')}}	</p>
+									
 										<p>{{__('footer.email')}}</p>
 										<p>{{__('footer.phone')}}</p>
 								</div>
@@ -195,7 +273,7 @@
 						<div class="row align-items-center">
 							
 							<div class="col-lg-12 col-md-12 text-center">
-								<p class="mb-0">© 2019 {{__('index.copy')}}</p>
+								<p class="mb-0">© 2020 {{__('index.copy')}}</p>
 							</div>
 							
 						</div>

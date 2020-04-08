@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="ct-header ct-header--slider ct-slick-custom-dots text-center" id="home">
+{{-- <div class="ct-header ct-header--slider ct-slick-custom-dots text-center" id="home">
     <div class="ct-slick-homepage" data-arrows="true" data-autoplay="true">
 
         <div class="ct-header slick-slide-animate tablex item"  data-background="/blog/img/baner/1.jpg">
@@ -54,6 +54,59 @@
         
     </div><!-- .ct-slick-homepage -->
 </div>
+ --}}
+
+
+
+
+
+
+
+
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="/blog/img/baner/2.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="/blog/img/baner/1.jpg" alt="Second slide">
+      </div>
+
+      <div class="carousel-item">
+        <img class="d-block w-100" src="/blog/img/baner/3.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100"  src="/blog/img/baner/4.jpg" alt="Third slide">
+      </div>
+
+      <div class="carousel-item">
+        <img class="d-block w-100"  src="/blog/img/baner/5.jpg" alt="Third slide">
+      </div>
+
+      <div class="carousel-item">
+        <img class="d-block w-100"  src="/blog/img/baner/6.jpg" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 <div class="clearfix"></div>  
 <!-- ============================ Hero Slider Banner End ================================== -->
 
@@ -72,6 +125,7 @@
                                 <div class="sec-heading mx-auto">
                                     <h2>{{ __('index.part.title') }}</h2>
                                     <h6>{{ __('index.part.body') }} </h6>
+                                 
                                 </div>
                             </div>
                         </div>
@@ -85,6 +139,7 @@
                             <div class="large-features-2-detail">
                                 <h4>{{ __('index.part.title1') }}</h4>
                                 <p> {{ __('index.part.body1') }}</p>
+                                <a href="{{route('teamBranding')}}#poro">ادامه ی مطلب</a>
                             </div>
                         </div>
                     </div>
@@ -98,7 +153,9 @@
                                 <h4> {{ __('index.part.title2') }}</h4>
                                 <p>
                                     {{ __('index.part.body2') }}
-                                </p>                            </div>
+                                </p>      
+                                <a href="{{route('teamBranding')}}#Wireframing">ادامه ی مطلب</a>    
+                              </div>
                         </div>
                     </div>
                     
@@ -329,8 +386,8 @@
                  <center><h2>{{__('index.sample')}}</h2></center>   
                     <ul class="sorting clearfix center-grid">
                         <li class="sort-btn active" data-filter="*">همه</li>
-                        <li class="sort-btn" data-filter=".teaser">{{__('index.sample.teaser')}}</li>
                         <li class="sort-btn" data-filter=".program">{{__('index.sample.program')}}</li>
+                        <li class="sort-btn" data-filter=".teaser">{{__('index.sample.teaser')}}</li>
                         <li class="sort-btn" data-filter=".logo">{{__('index.sample.Logo')}}</li>
                         <li class="sort-btn" data-filter=".android">{{__('index.sample.android')}}</li>
                         <li class="sort-btn" data-filter=".poster">{{__('index.sample.poster')}}</li>

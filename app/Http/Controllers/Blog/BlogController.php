@@ -163,6 +163,7 @@ class BlogController extends Controller
 
     public function sampleProgram()
     {
+       
         $local=app()->getLocale();
         $items=Sample::where('category','program')->Where('lang',$local)->paginate(12);
         return view('blog.sample.program',compact('items'));
@@ -174,5 +175,12 @@ class BlogController extends Controller
         $items=Sample::where('category','teaser')->Where('lang',$local)->paginate(12);
         return view('blog.sample.teaser',compact('items'));
     }
+
+
+    public function teamBranding()
+    {
+        return view('blog.teamBranding');
+    }
+   
 
 }

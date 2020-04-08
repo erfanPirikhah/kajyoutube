@@ -41,13 +41,12 @@
           <label>دسته بندی نمونه کار</label>
           <select name="category" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" >
             <option selected="selected">یک گزینه را انتخاب کنید ......</option>
-            <option value="program">طراحی و برنامه نویسی سایت</option>
-            <option value="teaser" >تیزر تبلیغاتی </option>
-            <option value="logo" >لوگو </option>
-            <option value="poster" >پوستر</option>
-            <option value="android" >برنامه نویسی اندروید و ios</option>
-            <option value="animaite" >عکاسی  ساخت تیزر و انیمشین</option>
-            <option value="Campaign" >کمپین</option>
+
+            @foreach ($cat as $item)
+                <option value={{$item->id}}>{{$item->name}}</option>
+            @endforeach
+
+           
          
         </select>
       </div>

@@ -40,14 +40,11 @@
         <div class="form-group">
             <label>دسته بندی نمونه کار</label>
             <select name="category" class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" >
-            <option selected="selected">یک گزینه را انتخاب کنید ......</option>
-            <option value="teaser"    {{$sample->category == 'teaser' ? 'selected' : ''}}>تیزر تبلیغاتی </option>
-            <option value="logo"      {{$sample->category == 'logo' ? 'selected' : ''}}>لوگو </option>
-            <option value="program"   {{$sample->category == 'program' ? 'selected' : ''}}>طراحی و برنامه نویسی سایت</option>
-            <option value="poster"    {{$sample->category == 'poster' ? 'selected' : ''}}>پوستر</option>
-            <option value="android"   {{$sample->category == 'android' ? 'selected' : ''}}>برنامه نویسی اندروید و ios</option>
-            <option value="animaite"  {{$sample->category == 'animaite' ? 'selected' : ''}}>انیمشین</option>
-            <option value="Campaign"  {{$sample->category == 'Campaign' ? 'selected' : ''}}>کمپین</option>
+   
+
+            @foreach ($categories as $item)
+            <option value={{$item->id}} {{$sample->category_id == $item->id ? "selected " : ''}}>{{$item->name}}</option>
+             @endforeach
            
           </select>
         </div>

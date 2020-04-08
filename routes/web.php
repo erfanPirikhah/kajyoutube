@@ -47,6 +47,8 @@ use Illuminate\Http\Resources\Json\Resource;
         Route::get('/sample-program','BlogController@sampleProgram')->name('sample.program');
         Route::get('/sample-teaser','BlogController@sampleTeaser')->name('sample.teaser');
 
+        Route::get('/teamBranding','BlogController@teamBranding')->name('teamBranding');
+
 
     });
 
