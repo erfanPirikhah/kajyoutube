@@ -8,9 +8,11 @@ use Artesaos\SEOTools\Facades\SEOTools;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Menu;
 use App\Personnel;
 use App\Sample;
 use App\Us;
+use App\Page;
 use Illuminate\Support\Facades\App;
 
 class BlogController extends Controller
@@ -18,10 +20,12 @@ class BlogController extends Controller
     public function index()
     {
         $local=app()->getLocale();
-        
+       
         $personnels=Personnel::whereLang($local)->get();
         return view('blog.index', compact('personnels'));
     }
+
+    
 
     public function about()
     {
@@ -142,7 +146,7 @@ class BlogController extends Controller
 
     public function sampleCampaign()
     {
-        $local=app()->getLocale();
+        
         $items=Sample::where('category','Campaign')->Where('lang',$local)->paginate(12);
         return view('blog.sample.Campaign',compact('items'));
     }
@@ -175,4 +179,15 @@ class BlogController extends Controller
         return view('blog.sample.teaser',compact('items'));
     }
 
+
+    
+    
+    public function url(Page $page)
+    { 
+       
+
+      return view('blog.headerShow',compact('page'));
+      
+       
+    }
 }

@@ -24,10 +24,15 @@ Route::group(['namespace'=>'Admin','prefix'=>'admin','middleware'=>'auth'], func
     Route::Resource('personnel', 'PersonnelController');
     Route::Resource('sample', 'SampleController');
     Route::Resource('us', 'UsController');
+    Route::Resource('menu','MenuController');
+    Route::Resource('page','PageController');
     Route::resource('category', 'CategoryController');
     Route::resource('order', 'OrderController');
     Route::get('search/sample', 'SampleController@search')->name('search.sample');
     Route::get('search/content', 'ContentController@search')->name('search.content');
+   
+
+   
 });
 
 Auth::routes();

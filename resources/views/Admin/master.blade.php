@@ -175,6 +175,27 @@
                 </li>
                 
               </ul>
+
+              <li class="nav-item">
+                <a href="{{route('menu.index')}}" class="nav-link">
+                  <i class="nav-icon fa fa-envelope-o"></i>
+                  <p>
+                  تنظیمات منو
+                    
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="{{route('page.index')}}" class="nav-link">
+                  <i class="nav-icon fa fa-envelope-o"></i>
+                  <p>
+                 برگه ها 
+                    
+                  </p>
+                </a>
+              </li>
+
               <li class="nav-item">
                 <a href="{{route('order.index')}}" class="nav-link">
                   <i class="nav-icon fa fa-envelope-o"></i>

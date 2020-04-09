@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Menu;
 
 class AdminController extends Controller
 {
@@ -11,4 +14,6 @@ class AdminController extends Controller
     {
         return view('Admin.part.panel');
     }
+
+    
 }

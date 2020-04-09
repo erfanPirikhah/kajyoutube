@@ -72,6 +72,10 @@
 						<div class="collapse navbar-collapse hover-dropdown font-14 ml-auto" id="navigation">
 							<ul class="navbar-nav ml-auto">
 								<li class="nav-item"><a href="/"  class="nav-link">{{__('index.header.home')}}</a> </li>
+
+								@foreach (\App\Menu::all() as $item)
+									<li class="nav-item"><a href="/fa/header/{{$item->url}}"  class="nav-link">{{$item->title}}</a> </li>
+								@endforeach
 								
 								
 								<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{__('index.header.service')}} <i class="fa fa-angle-down m-l-5"></i></a>

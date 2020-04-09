@@ -48,10 +48,14 @@ use Illuminate\Http\Resources\Json\Resource;
         Route::get('/sample-teaser','BlogController@sampleTeaser')->name('sample.teaser');
 
 
+        Route::get('/header/{page}','BlogController@url')->name('header');
+        
+
+
     });
 
 
-
+    
 
 Auth::routes();
 
