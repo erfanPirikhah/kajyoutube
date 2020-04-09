@@ -40,8 +40,9 @@ class SampleController extends Controller
      */
     public function create()
     {
+        $cat=Category::all();
         $categories=Category::all();
-        return view('Admin.part.sample.create', compact('categories'));
+        return view('Admin.part.sample.create', compact('categories','cat'));
     }
 
     /**
@@ -69,7 +70,7 @@ class SampleController extends Controller
 
         $sample=Sample::create([
              'name'=>request('name'),
-             'category'=>request('category'),
+             'category_id'=>request('category'),
              'lang'=>request('lang'),
              'body'=>request('body'),
              'imageUrl'=>request('imageUrl'),
@@ -100,6 +101,7 @@ class SampleController extends Controller
      */
     public function edit(Sample $sample)
     {
+        
         $categories=Category::all();
         return view('Admin.part.sample.edit', compact('sample', 'categories'));
     }
@@ -136,7 +138,7 @@ class SampleController extends Controller
           
         $sample->update([
             'name'=>request('name'),
-             'category'=>request('category'),
+             'category_id'=>request('category'),
              'lang'=>request('lang'),
              'body'=>request('body'),
               'imageUrl'=>request('videoUrl'),
@@ -163,3 +165,13 @@ class SampleController extends Controller
         return back();
     }
 }
+
+
+
+
+
+
+
+
+
+

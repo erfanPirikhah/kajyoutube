@@ -39,7 +39,7 @@
               <td>{{$n++}}</td>
               <td><img src="{{$row->imageUrl}}" alt="" style="width:70px; height:50px;" class="rounded" ></td>
               <td>{{$row->name}}</td>
-              <td>{{$row->category }}</td>
+              <td>{{$row->category->name}}</td>
               <td>{{$row->lang == 'fa'  ?'فارسی ':"انگلیسی"}}</td>
               <th>
         

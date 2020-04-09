@@ -128,10 +128,7 @@ a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
-p {
-   text-align: justify;
-  
-}
+
 
 a:hover,
 a:focus {
