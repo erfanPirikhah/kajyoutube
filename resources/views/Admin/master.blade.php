@@ -31,6 +31,8 @@
   <!-- template rtl version -->
   <link rel="stylesheet" href="/css/custom-style.css">
 
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -125,7 +127,7 @@
           
             <li class="nav-item has-treeview">
               <a href="#" class="nav-link">
-                <i class="nav-icon fa fa-pie-chart"></i>
+                <i class="fas fa-home"></i>
                 <p>
                   صفحه ی اصلی 
                   <i class="right fa fa-angle-left"></i>
@@ -178,7 +180,7 @@
 
               <li class="nav-item">
                 <a href="{{route('menu.index')}}" class="nav-link">
-                  <i class="nav-icon fa fa-envelope-o"></i>
+                  <i class="fas fa-money-check"></i>
                   <p>
                   تنظیمات منو
                     
@@ -188,7 +190,7 @@
 
               <li class="nav-item">
                 <a href="{{route('page.index')}}" class="nav-link">
-                  <i class="nav-icon fa fa-envelope-o"></i>
+                  <i class="fas fa-sticky-note"></i>
                   <p>
                  برگه ها 
                     
@@ -196,9 +198,43 @@
                 </a>
               </li>
 
+
+
+            <li class="nav-item">
+              <a href="{{route('team.index')}}" class="nav-link">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <p>
+                  تنظیمات تیم برندینگ
+
+                </p>
+              </a>
+            </li>
+
+
+            
+            <li class="nav-item">
+              <a href="{{route('centerPage.index')}}" class="nav-link">
+                <i class="far fa-file-alt"></i>
+                <p>
+                 centerPage تنظیمات   
+
+                </p>
+              </a>
+            </li>
+
+
+            <li class="nav-item">
+              <a href="{{route('slider.index')}}" class="nav-link">
+                <i class="fas fa-sliders-h"></i>
+                <p>
+                    تنظیمات اسلایدر 
+                </p>
+              </a>
+            </li>
+
               <li class="nav-item">
                 <a href="{{route('order.index')}}" class="nav-link">
-                  <i class="nav-icon fa fa-envelope-o"></i>
+                  <i class="fas fa-envelope-open-text"></i>
                   <p>
                    سفارشات
                     
@@ -208,7 +244,7 @@
             
               <li class="nav-item">
                 <a href="{{route('category.index')}}" class="nav-link">
-                  <i class="nav-icon fa fa-th"></i>
+                  <i class="far fa-address-card"></i>
                   <p>
                  دسته بندی
                     
@@ -218,7 +254,7 @@
 
               <li class="nav-item">
                 <a href="{{route('us.index')}}" class="nav-link">
-                  <i class="nav-icon fa fa-book"></i>
+                  <i class="fas fa-users-cog"></i>
                   <p>
                    ارتباط با ما
                     

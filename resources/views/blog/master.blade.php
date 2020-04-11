@@ -22,7 +22,9 @@
 
 		
 	</head>
-	<style>
+
+			
+	{{-- <style>
 #loading {
    width: 100%;
    height: 100%;
@@ -42,25 +44,25 @@
     left: 45%;
   z-index: 99999999;
 }
-	</style>
+	</style> --}}
 	
     <body>
 
 
-<div id="loading">
+{{-- <div id="loading">
   <img id="loading-image" src="/blog/img/Infinity-1s-200px (1).gif" alt="Loading..." />
-</div>
+</div> --}}
 
 
         <!-- ============================================================== -->
         <!-- Preloader - style you can find in spinners.css -->
         <!-- ============================================================== -->
-        <div class="preloader" style="display: none;">
-            <div class="loader">
-                <div class="loader__figure"></div>
-                <p class="loader__label">Themex</p>
-            </div>
-        </div>
+	   
+		
+
+
+
+		
 		
 
 		<div class="topbar" id="top">
@@ -71,11 +73,27 @@
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="ti-align-right"></span></button>
 						<div class="collapse navbar-collapse hover-dropdown font-14 ml-auto" id="navigation">
 							<ul class="navbar-nav ml-auto">
+
+								
 								<li class="nav-item"><a href="/"  class="nav-link">{{__('index.header.home')}}</a> </li>
 
-								@foreach (\App\Menu::all() as $item)
-									<li class="nav-item"><a href="/fa/header/{{$item->url}}"  class="nav-link">{{$item->title}}</a> </li>
-								@endforeach
+									@foreach (\App\Menu::where('chid','0')->get() as $item)
+												@php
+													$a=\App\Menu::where('chid',$item->id)->get();
+												@endphp
+										<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{$item->title}} <i class="{{$a->count() ? 'fa fa-angle-down m-l-5' : ''}}"></i></a>
+											
+											@if ($a->count())
+
+												<ul class="b-none dropdown-menu font-14 animated fadeInUp">
+													@foreach ( $a as $val)
+														<li><a class="dropdown-item" href="#">{{$val->title}}</a></li>	
+													@endforeach
+												</ul>	
+											@endif
+											
+												
+									@endforeach
 								
 								
 								<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{__('index.header.service')}} <i class="fa fa-angle-down m-l-5"></i></a>
@@ -95,7 +113,7 @@
 								
 								
 								
-							<li class="nav-item"><a href="{{route('content')}}"  class="nav-link">{{__('index.header.news')}}</a> </li>
+							<li class="nav-item "><a href="{{route('content')}}"  class="nav-link">{{__('index.header.news')}}</a> </li>
 							<li class="nav-item"><a href="{{route('sample.all')}}"  class="nav-link">{{__('index.header.sample')}}</a> </li>
 							<li class="nav-item"><a href="{{route('order')}}"  class="nav-link">{{__('index.header.order')}}</a> </li>
 							<li class="nav-item"><a href="{{route('about')}}"  class="nav-link">{{__('index.header.about')}}</a> </li>
